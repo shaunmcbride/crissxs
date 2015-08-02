@@ -1,0 +1,44 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	
+	background-color: #ffff9b
+}
+header {
+	background-color: #98fb98
+}
+section {
+  float: left;
+  margin: 0 1.5%;
+  width: 63%;
+}
+aside {
+  float: right;
+  margin: 0 1.5%;
+  width: 30%;
+}
+article {
+	float: left;
+  margin: 0 1.5%;
+  width: 67%;	
+}
+
+label {
+	display:inline-block;
+	margin-bottom:10px;
+}
+fieldset{
+	padding:10px;
+	boder-radius:10px;
+	
+}
+input {
+	float: right;
+	margin-right:70px;
+	width:150px;
+}
+
+
+input:invalid {
+	background-color:pink;
+}
