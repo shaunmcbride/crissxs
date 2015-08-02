@@ -38,9 +38,21 @@
 		<fieldset>
 			<legend>Add Event</legend>
 			<p>
-				<label for="eventName">Name:</label><input type="text"
-					id="eventName" ng-model="event.name" />
+				<label for="eventName">Name:</label><input type="search"
+					id="eventName" list="languages" autocomplete="true" ng-model="event.name" />
 			</p>
+			<datalist id="languages">
+  <option value="PHP" />
+  <option value="C++" />
+  <option value="Java" />
+  <option value="Ruby" />
+  <option value="Python" />
+  <option value="Go" />
+  <option value="Perl" />
+  <option value="Erlang" />
+</datalist>
+			
+			
 			<p>
 				<input type="button" ng-click="addEvent()" value="Add" />
 			</p>

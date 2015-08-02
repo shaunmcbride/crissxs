@@ -65,6 +65,9 @@ app.controller('LoginController', ['$scope','$http', function($scope,$http) {
 				  };
 				  
 				  $scope.addEvent = function() {
+					  
+
+					  
 					    
 					    var event = {
 								title : $scope.event.name,

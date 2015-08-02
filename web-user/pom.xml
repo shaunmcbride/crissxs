@@ -5,7 +5,6 @@
 		<groupId>com.crissxs</groupId>
 		<artifactId>parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../parent</relativePath>
 	</parent>
 	<artifactId>web-user</artifactId>
 	<name>Web UI for User</name>
