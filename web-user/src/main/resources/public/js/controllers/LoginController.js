@@ -5,6 +5,38 @@ app.controller('LoginController', ['$scope','$http', function($scope,$http) {
 
 	$scope.hideRegister=true;
 	$scope.createEventHidden = true;
+	
+
+	$scope.eventCategoriesMapToNameService = {};
+	
+	
+	
+	var resCategories = $http.get('/event/categories');
+	resCategories.success(function(data, status, headers, config) {
+		
+			$scope.eventCategories = Object.keys(data);
+			$scope.eventCategoriesMapToNameService  = data;
+		
+
+
+	});
+	
+	$scope.populateEvents = function(){
+		var eventService = $scope.eventCategoriesMapToNameService[$scope.eventCategory];
+		var resEvent = $http.get(eventService);
+		resEvent.success(function(data, status, headers, config) {
+			
+			$scope.eventNames = Object.keys(data);
+		
+
+
+	});
+		
+		
+		
+		
+		
+	};
 
 
 	

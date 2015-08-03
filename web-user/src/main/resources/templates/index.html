@@ -38,19 +38,22 @@
 		<fieldset>
 			<legend>Add Event</legend>
 			<p>
-				<label for="eventName">Name:</label><input type="search"
-					id="eventName" list="languages" autocomplete="true" ng-model="event.name" />
+			<label for="eventCategory">Category:</label>
+			<input type="search" id="eventCategory" list="eventCategoryLst" autocomplete="on"
+			ng-model="eventCategory" ng-selected="populateEvents()"/>
 			</p>
-			<datalist id="languages">
-  <option value="PHP" />
-  <option value="C++" />
-  <option value="Java" />
-  <option value="Ruby" />
-  <option value="Python" />
-  <option value="Go" />
-  <option value="Perl" />
-  <option value="Erlang" />
-</datalist>
+			<datalist id="eventCategoryLst" ng-model="eventCategories">
+				<option ng-repeat="eventCategory in eventCategories" value="{{eventCategory}}"></option>
+			</datalist>
+			
+			
+			<p>
+				<label for="eventName">Name:</label><input type="search"
+					id="eventName" list="eventNames" autocomplete="on" ng-model="event.name" />
+			</p>
+			<datalist id="eventNames">
+				<option ng-repeat="eventCategory in eventNames" value="{{eventName}}"></option>
+			</datalist>
 			
 			
 			<p>
