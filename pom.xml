@@ -98,4 +98,7 @@
 	<modules>
 		<module>web-user</module>
 	</modules>
+	<scm>
+		<url>https://github.com/shaunmcbride/crissxs.git</url>
+	</scm>
 </project>
